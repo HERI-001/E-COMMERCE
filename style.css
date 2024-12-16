@@ -1,0 +1,221 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(images/composition-black-friday-shopping-cart-with-copy-space.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.display-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid red;
+  margin: 1rem 0;
+  padding: 0 2rem;
+  /* position: fixed; */
+}
+
+.logo img {
+  width: 4rem;
+}
+
+.form input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.image img {
+  width: 30px;
+}
+.loginInfo {
+  display: flex;
+  align-items: center;
+}
+
+.loginImg {
+  width: 4rem;
+}
+.cart {
+  position: relative;
+}
+.cart a img {
+  width: 2.5rem;
+}
+#num {
+  /* height: 2rem; */
+  width: 2rem;
+  background-color: red;
+  padding: 4px 1px;
+  color: white;
+  border-radius: 60%;
+  text-align: center;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.flexinfo {
+  display: flex;
+  gap: 5rem;
+}
+
+.side-bar {
+  width: 15rem;
+  border: 2px solid black;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: white;
+  font-family: "Lucida Sans", sans-serif;
+  padding: 5rem 1rem;
+  gap: 2rem;
+  border-radius: 20px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  color: yellow;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.main-content div {
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 1rem;
+  /* border-radius: 8px; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+  /* height: 15rem; */
+}
+
+.main-content div:hover {
+  transform: scale(1.05);
+}
+
+.main-content img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  /* border-radius: 8px; */
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.product-card {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-button:hover {
+  background-color: #555;
+}
+
+/* .product-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.product-button:hover {
+  background-color: #555;
+} */
+
+.product-button:active {
+  transform: scale(0.98);
+}
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  font-family: "Lucida Sans", sans-serif;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 1102px) {
+  .flexinfo {
+    gap: 4rem;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .side-bar {
+    width: 12rem;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .side-bar {
+    width: 100%;
+  }
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .flexinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

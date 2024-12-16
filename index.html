@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="display-nav">
+          <div class="logo">
+            <img src="images/9025822_linux_logo_icon.png" alt="Logo" />
+          </div>
+          <div class="search">
+            <form>
+              <input type="text" placeholder=" Enter" />
+            </form>
+
+            <div class="image">
+              <a href="#"
+                ><img
+                  src="images/8608588_ecommerce_bag_search_icon.png"
+                  alt="img"
+              /></a>
+            </div>
+          </div>
+          <div class="cart">
+            <a href="cart.html">
+              <img
+                src="images/4781813_bag_buy_cart_market_shop_icon.svg"
+                alt="Cart"
+              />
+            </a>
+            <div id="num"><h1></h1></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="flexinfo">
+      <div class="side-bar">
+        <h2>CATEGORIES</h2>
+      </div>
+      <div class="main-content">
+        <!-- Product cards will be dynamically added here -->
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2023 Your Store. All rights reserved.</p>
+    </footer>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" autoplay loop>
+      <source src="audio/jingle-joy-264041.mp3" type="audio/mpeg" />
+      <source src="audio/background-music.ogg" type="audio/ogg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Volume Control -->
+    <div class="audio-control">
+      <label for="volumeControl">Volume:</label>
+      <input
+        type="range"
+        id="volumeControl"
+        min="0"
+        max="1"
+        step="0.2"
+        value="0.5"
+      />
+    </div>
+
+    <script>
+      // Background music control
+      const audio = document.getElementById("backgroundMusic");
+      const volumeControl = document.getElementById("volumeControl");
+
+      // Set volume dynamically
+      volumeControl.addEventListener("input", (event) => {
+        audio.volume = event.target.value;
+      });
+    </script>
+    <script src="function.js"></script>
+  </body>
+</html>

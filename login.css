@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: url(images/composition-black-friday-shopping-cart-with-copy-space.jpg);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 5rem;
+}
+/* .login div {
+  transform: scale(1.5);
+} */
+.login a {
+  background-color: white;
+  color: aqua;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+}
+.login a:hover {
+  color: white;
+  background-color: aqua;
+  transition: 1s ease-in-out;
+}
+
+.form-fill {
+  display: flex;
+}
+
+#loginForm,
+.Inputbox-2 {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  width: 400px;
+  height: 500px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  align-items: center;
+}
+#loginForm h2,
+.Inputbox-1 h2 {
+  text-align: center;
+  margin: 0 auto;
+  /* margin: 0 auto; */
+}
+.Inputbox-2 {
+  display: none;
+}
+.gap input {
+  gap: 1rem;
+}
+.form {
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+.form-fill-1,
+.form-fill-2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+#loginForm input,
+.form-fill-2 input {
+  align-items: center;
+  padding: 5px;
+  width: 20rem;
+  background-color: transparent;
+  outline-color: grey;
+  color: grey;
+}
+.login-btn {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+.login-btn a {
+  background-color: black;
+  color: whitesmoke;
+  padding: 10px 15px;
+  border-radius: 15px;
+  /* margin: 0 auto; */
+}
+.login-link,
+.register-link {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 1rem; */
+}

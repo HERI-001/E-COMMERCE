@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <div class="logo">
+          <img src="images/9025822_linux_logo_icon.png" alt="" />
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="login">
+          <a href="#" onclick="toggleForms('login')">Login</a>
+        </div>
+      </nav>
+    </div>
+
+    <form id="loginForm">
+      <h2>Login Form</h2>
+      <label for="loginEmail">Email:</label>
+      <input type="email" id="loginEmail" oninput="validateEmail(this)" />
+      <span id="emailError" style="display: none; color: red"
+        >Invalid email address</span
+      ><br /><br />
+
+      <label for="loginPassword">Password:</label>
+      <input
+        type="password"
+        id="loginPassword"
+        oninput="validatePassword(this)"
+      />
+      <span id="passwordError" style="display: none; color: red"
+        >Password must be at least 8 characters long, include an uppercase
+        letter, a number, and a special character.</span
+      ><br /><br />
+
+      <!-- Toast Notification -->
+      <div id="toast" class="toast"></div>
+
+      <button type="button" onclick="toggleForms('register')">
+        Go to Register
+      </button>
+    </form>
+
+    <form id="registerForm" style="display: none">
+      <h2>Register Form</h2>
+      <label for="registerEmail">Email:</label>
+      <input type="email" id="registerEmail" oninput="validateEmail(this)" />
+      <span id="emailErrorRegister" style="display: none; color: red"
+        >Invalid email address</span
+      ><br /><br />
+
+      <label for="registerUsername">Username:</label>
+      <input
+        type="text"
+        id="registerUsername"
+        oninput="capitalizeFirstLetter(this)"
+      /><br /><br />
+
+      <label for="registerPassword">Password:</label>
+      <input
+        type="password"
+        id="registerPassword"
+        oninput="validatePassword(this)"
+      />
+      <span id="passwordErrorRegister" style="display: none; color: red"
+        >Password must be at least 8 characters long, include an uppercase
+        letter, a number, and a special character.</span
+      ><br /><br />
+      <!-- Toast Notification -->
+      <div id="toast" class="toast"></div>
+
+      <button type="button" onclick="toggleForms('login')">Go to Login</button>
+    </form>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" autoplay loop>
+      <source src="audio/jingle-joy-264041.mp3" type="audio/mpeg" />
+      <source src="audio/background-music.ogg" type="audio/ogg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Volume Control -->
+    <div class="audio-control">
+      <label for="volumeControl">Volume:</label>
+      <input
+        type="range"
+        id="volumeControl"
+        min="0"
+        max="1"
+        step="0.1"
+        value="0.5"
+      />
+    </div>
+
+    <script>
+      // Background music control
+      const audio = document.getElementById("backgroundMusic");
+      const volumeControl = document.getElementById("volumeControl");
+
+      // Set volume dynamically
+      volumeControl.addEventListener("input", (event) => {
+        audio.volume = event.target.value;
+      });
+    </script>
+    <script src="login.js"></script>
+  </body>
+</html>
